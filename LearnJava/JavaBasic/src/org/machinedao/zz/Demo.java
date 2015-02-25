@@ -8,12 +8,12 @@ public class Demo {
 			float score;
 			
 			void Say(){
-				System.out.println(name + "µÄÄêÁäÊÇ " + age + ",³É¼¨ÊÇ" + score);
+				System.out.println(name + "çš„å¹´é¾„æ˜¯ " + age + ", æˆç»©æ˜¯" + score);
 			}
 		}
 		
 		Student stu1 = new Student();
-		stu1.name = "Ğ¡Ã÷";
+		stu1.name = "å°æ˜";
 		stu1.age = 15;
 		stu1.score = 92.5f;
 		stu1.Say();
