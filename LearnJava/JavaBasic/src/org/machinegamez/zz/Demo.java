@@ -19,5 +19,4 @@ public class Demo {
 		stu1.Say();
 		
 	}
-
 }
