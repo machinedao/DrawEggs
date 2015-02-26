@@ -1,4 +1,4 @@
-package org.machinedao.zz;
+package org.machinegamez.zz;
 
 public class Demo {
 	public static void main(String[] args){
