@@ -18,5 +18,10 @@ public class Demo {
 		stu1.score = 92.5f;
 		stu1.Say();
 		
+		int[] demoArray = new int[3];
+		for(int i = 0; i<demoArray.length; i++){
+			System.out.println(demoArray[i]);  // 输出三个 0
+		}
+		
 	}
 }
