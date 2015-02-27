@@ -23,5 +23,18 @@ public class Demo {
 			System.out.println(demoArray[i]);  // 输出三个 0
 		}
 		
+		
+		/*
+		 * Java提供了”增强版“的for循环，专门用来遍历数组，语法为
+		 * 
+		 * for( arrayType varName: arrayName ){
+    	 * // Some Code
+		 * }
+		 */
+		int arrayDemo[] = {1, 2, 4, 7, 9, 192, 100};
+		for(int x : arrayDemo){
+			System.out.println(x + ", ");
+		}
+		
 	}
 }
