@@ -1,5 +1,7 @@
 package org.machinegamez.zz;
 
+import java.util.Arrays;
+
 public class Demo {
 	public static void main(String[] args){
 		class Student{
@@ -36,5 +38,23 @@ public class Demo {
 			System.out.println(x + ", ");
 		}
 		
+		/*
+		 * 字符串操作
+		 * length() 返回字符串的长度
+		 * charAt() 方法的作用是按照索引值获得字符串中的指定字符。
+		 * replace() 字符串替换 
+		 * split() 以指定字符串作为分隔符，对当前字符串进行分割，分割的结果是一个数组
+		 */
+		String str = "123456789";
+		System.out.println(str.length());
+		System.out.println(str.charAt(0) + " " + str.charAt(5));
+		String str1 = "谷歌 is google.com";
+		String str2 = str1.replace("谷歌", "google"); // 前者替换成后者
+		System.out.println(str1);
+		System.out.println(str2); // google is google.com
+		String str3 = "what_is_big_data";
+		String[] strArr = str3.split("_");
+		System.out.println(Arrays.toString(strArr)); // 直接打印输出数组 [what, is, big, data]
+
 	}
 }
