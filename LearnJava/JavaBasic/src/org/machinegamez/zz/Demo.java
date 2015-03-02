@@ -55,6 +55,42 @@ public class Demo {
 		String str3 = "what_is_big_data";
 		String[] strArr = str3.split("_");
 		System.out.println(Arrays.toString(strArr)); // 直接打印输出数组 [what, is, big, data]
+		
+		/*
+		 * StringBuffer 默认分配16字节长度的缓冲区，当字符串超过该大小时，
+		 * 会自动增加缓冲区长度，而不是生成新的对象。
+		 * 
+		 * StringBuffer不像String，只能通过 new 来创建对象，不支持简写方式
+		 * 
+		 * StringBuffer类中的方法主要偏重于对于字符串的操作，例如追加、插入和删除等，
+		 * 这个也是StringBuffer类和String类的主要区别。
+		 * 实际开发中，如果需要对一个字符串进行频繁的修改，建议使用 StringBuffer。
+		 * 
+		 * 字符串的”+“操作实际上也是先创建一个StringBuffer对象，
+		 * 然后调用append()方法将字符串片段拼接起来，最后调用toString()方法转换为字符串。
+		 * 
+		 */
+		StringBuffer strb1 = new StringBuffer();
+		StringBuffer strb2 = new StringBuffer(512); // 分配512个字节长度的缓冲区
+		StringBuffer strb3 = new StringBuffer("www.google.com"); // 在缓冲区中存放了字符串，并在后面预留了16个字节长度的空缓冲区
+		
+		strb3.append(true);
+		System.out.println(strb3); // 输出 www.google.comtrue
+		
+		// deleteCharAt() 方法用来删除指定位置的字符，并将剩余的字符形成新的字符串。
+		StringBuffer strb4 = new StringBuffer("abcde");
+		strb4.deleteCharAt(3); // 删除索引为3的字符，即 d
+		
+		StringBuffer strb5 = new StringBuffer("abcde");
+		strb5.delete(1, 3); // 删除索引值为 1~3 之间的字符，包括索引值1，但不包括3
+		
+		// insert() 用来在指定位置插入字符串，可以认为是append()的升级版
+		StringBuffer strb6 = new StringBuffer("abcde");
+		strb6.insert(3,"xyz");	// "abcdxyze" 
+		
+		// setCharAt() 方法用来修改指定位置的字符
+		StringBuffer strb7 = new StringBuffer("abcde");
+		strb7.setCharAt(3, 'z'); // "abcze"  索引值为3的字符修改为 z
 
 	}
 }
