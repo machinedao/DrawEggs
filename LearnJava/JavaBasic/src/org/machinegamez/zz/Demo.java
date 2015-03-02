@@ -91,6 +91,20 @@ public class Demo {
 		// setCharAt() 方法用来修改指定位置的字符
 		StringBuffer strb7 = new StringBuffer("abcde");
 		strb7.setCharAt(3, 'z'); // "abcze"  索引值为3的字符修改为 z
+		
+		/*
+		 * StringBuilder类和StringBuffer类功能基本相似，方法也差不多，
+		 * 主要区别在于StringBuffer类的方法是多线程安全的，
+		 * 而StringBuilder不是线程安全的，
+		 * 相比而言，StringBuilder类会略微快一点。
+		 * 
+		 * StringBuffer、StringBuilder、String中都实现了CharSequence接口。
+		 * CharSequence是一个定义字符串操作的接口，
+		 * 它只包括length()、charAt(int index)、subSequence(int start, int end) 这几个API。
+		 * 
+		 * 一般情况下，速度从快到慢为 StringBuilder > StringBuffer > String
+		 */
+	
 
 	}
 }
