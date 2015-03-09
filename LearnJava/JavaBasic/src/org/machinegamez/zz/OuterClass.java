@@ -28,8 +28,8 @@ public class OuterClass {
 		InnerClass innerClass = outerClass.new InnerClass();
 		innerClass.doStaff();
 		
-		System.out.println(outerClass.size);
-		System.out.println(innerClass.count);
+		System.out.println(outerClass.size);	// 输出 1
+		System.out.println(innerClass.count);	// 输出 10
 		
 		// 编译错误，外部类不能访问内部类的变量
 		//System.out.println(count);
