@@ -9,6 +9,10 @@ package org.machinegamez.zz;
  * 下述代码中 new B(this).print(); 等价于 ( new B(this) ).print();，
  * 先通过 new B(this) 创建一个没有名字的对象，再调用它的方法。
  * 
+ * 最后注意 super 与 this 的区别：super 不是一个对象的引用，
+ * 不能将 super 赋值给另一个对象变量，
+ * 它只是一个指示编译器调用父类方法的特殊关键字。
+ * 
  */
 public class This2 {
 
