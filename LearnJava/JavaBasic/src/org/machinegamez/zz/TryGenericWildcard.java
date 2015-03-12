@@ -6,16 +6,16 @@ public class TryGenericWildcard {
 		Point<Integer, Integer> p1 = new Point<Integer, Integer>();
 		p1.setX(10);
 		p1.setY(20);
-		pointPoint(p1);
+		printPoint(p1);
 		
 		Point<String, String> p2 = new Point<String, String>();
 		p2.setX("东京180度");
 		p2.setY("北纬30度");
-		pointPoint(p2);
+		printPoint(p2);
 
 	}
 	
-	public static void pointPoint(Point<?,?> p) {	// 使用通配符
+	public static void printPoint(Point<?,?> p) {	// 使用通配符
 		System.out.println("This point is: " + p.getX() + ", " + p.getY());
 	}
 
