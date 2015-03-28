@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.main, menu);
-        menu.add(0,FIRST,1,"¿ªÊ¼ÓÎÏ·");
-        menu.add(0,SECOND,2,"ÔİÍ£ÓÎÏ·");
+        menu.add(0,FIRST,1,"å¼€å§‹æ¸¸æˆ");
+        menu.add(0,SECOND,2,"æš‚åœæ¸¸æˆ");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -38,10 +38,10 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == 1) {
-            textView.setText("¿ªÊ¼ÓÎÏ·");
+            textView.setText("å¼€å§‹æ¸¸æˆ");
         }
         if (id == 2) {
-        	textView.setText("ÔİÍ£ÓÎÏ·");
+        	textView.setText("æš‚åœæ¸¸æˆ");
         }
         return super.onOptionsItemSelected(item);
     }

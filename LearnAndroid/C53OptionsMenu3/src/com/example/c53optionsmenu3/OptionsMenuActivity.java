@@ -26,22 +26,22 @@ public class OptionsMenuActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 //		getMenuInflater().inflate(R.menu.options_menu, menu);
 //		return true;
-		menu.add(0,FIRST,1,"¿ªÊ¼ÓÎÏ·");
-		menu.add(0,SECOND,2,"ÔİÍ£ÓÎÏ·");
-		// Ìí¼Ó²Ëµ¥Ïî
-		MenuItem item = menu.add(0,THREE,3,"¹ØÓÚÓÎÏ·");
-		// Ìí¼Ó×Ó²Ëµ¥
-		final SubMenu subMenu = menu.addSubMenu(1,100,100,"ÍË³öÓÎÏ·");
-		// Ìí¼Ó²Ëµ¥Ïî
-		subMenu.add(2,101,101,"È·¶¨");
-		subMenu.add(2,102,102,"È¡Ïû");
+		menu.add(0,FIRST,1,"å¼€å§‹æ¸¸æˆ");
+		menu.add(0,SECOND,2,"æš‚åœæ¸¸æˆ");
+		// æ·»åŠ èœå•é¡¹
+		MenuItem item = menu.add(0,THREE,3,"å…³äºæ¸¸æˆ");
+		// æ·»åŠ å­èœå•
+		final SubMenu subMenu = menu.addSubMenu(1,100,100,"é€€å‡ºæ¸¸æˆ");
+		// æ·»åŠ èœå•é¡¹
+		subMenu.add(2,101,101,"ç¡®å®š");
+		subMenu.add(2,102,102,"å–æ¶ˆ");
 		
 		item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
 				// TODO Auto-generated method stub
-				textView.setText("¹ØÓÚÓÎÏ·");
+				textView.setText("å…³äºæ¸¸æˆ");
 				return false;
 			}
 		});
@@ -55,10 +55,10 @@ public class OptionsMenuActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == 1) {
-			textView.setText("¿ªÊ¼ÓÎÏ·");
+			textView.setText("å¼€å§‹æ¸¸æˆ");
 		}
 		if (id == 2) {
-			textView.setText("ÔİÍ£ÓÎÏ·");
+			textView.setText("æš‚åœæ¸¸æˆ");
 		}
 		return super.onOptionsItemSelected(item);
 	}

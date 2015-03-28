@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.Button;
 
 /*
- * Context Menu µÄÊ¹ÓÃ (³¤°´)
- * ÔÚ²¼¾ÖÎÄ¼şÖĞÌí¼ÓButton¿Ø¼ş£¬È»ºóÂß¼­´úÂëÖĞÎªButton×¢²áContext Menu
+ * Context Menu çš„ä½¿ç”¨ (é•¿æŒ‰)
+ * åœ¨å¸ƒå±€æ–‡ä»¶ä¸­æ·»åŠ Buttonæ§ä»¶ï¼Œç„¶åé€»è¾‘ä»£ç ä¸­ä¸ºButtonæ³¨å†ŒContext Menu
  */
 
 public class ContextMenuActivity extends Activity {
@@ -21,30 +21,30 @@ public class ContextMenuActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_context_menu);
 		button = (Button)findViewById(R.id.button1);
-		// Îª Button ×¢²á ContextMenu
+		// ä¸º Button æ³¨å†Œ ContextMenu
 		registerForContextMenu(button);
 	}
 	
 	@Override
-	// Ã¿´ÎÎª View ¶ÔÏóºô³öÉÏÏÂÎÄ²Ëµ¥Ê±µ÷ÓÃ¸Ã·½·¨
+	// æ¯æ¬¡ä¸º View å¯¹è±¡å‘¼å‡ºä¸Šä¸‹æ–‡èœå•æ—¶è°ƒç”¨è¯¥æ–¹æ³•
 	public void onCreateContextMenu(ContextMenu menu, View v, 
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-		// ÉèÖÃ ContextMenu µÄ²Ëµ¥Í·¼°²Ëµ¥Ïî
+		// è®¾ç½® ContextMenu çš„èœå•å¤´åŠèœå•é¡¹
 		if(v==button){
-			menu.setHeaderTitle("ÇëÑ¡ÔñÄúÏ²»¶³ÔµÄË®¹û");
-			menu.add(200,200,200,"Æ»¹û");
-			menu.add(201,201,201,"Ïã½¶");
+			menu.setHeaderTitle("è¯·é€‰æ‹©æ‚¨å–œæ¬¢åƒçš„æ°´æœ");
+			menu.add(200,200,200,"è‹¹æœ");
+			menu.add(201,201,201,"é¦™è•‰");
 		}
 	};
 	
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
-		// Í¨¹ıÅĞ¶Ï itemId ´¦Àí²Ëµ¥Ñ¡ÖĞÊÂ¼şĞŞ¸Ä Button ÎÄ±¾ÄÚÈİ
+		// é€šè¿‡åˆ¤æ–­ itemId å¤„ç†èœå•é€‰ä¸­äº‹ä»¶ä¿®æ”¹ Button æ–‡æœ¬å†…å®¹
 		if(item.getItemId()==200) {
-			button.setText("Æ»¹û");
+			button.setText("è‹¹æœ");
 		} else if (item.getItemId()==201) {
-			button.setText("Ïã½¶");
+			button.setText("é¦™è•‰");
 		}
 		return super.onContextItemSelected(item);
 	};

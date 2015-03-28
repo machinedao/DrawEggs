@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class OptionsMenuActivity extends Activity {
 	private static int FIRST = Menu.FIRST;
 	private static int SECOND = Menu.FIRST + 1;
-	// ÉùÃ÷±»Ìí¼Ó²Ëµ¥ÏîµÄitemId
+	// å£°æ˜è¢«æ·»åŠ èœå•é¡¹çš„itemId
 	private static int THREE = Menu.FIRST + 2;
 	private TextView textView;
 
@@ -26,15 +26,15 @@ public class OptionsMenuActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 //		getMenuInflater().inflate(R.menu.options_menu, menu);
 //		return true;
-		menu.add(0,FIRST,1,"¿ªÊ¼ÓÎÏ·");
-		menu.add(0,SECOND,2,"ÔİÍ£ÓÎÏ·");
-		// Ìí¼Ó²Ëµ¥Ïî
-		MenuItem item = menu.add(0,THREE,3,"¹ØÓÚÓÎÏ·");
+		menu.add(0,FIRST,1,"å¼€å§‹æ¸¸æˆ");
+		menu.add(0,SECOND,2,"æš‚åœæ¸¸æˆ");
+		// æ·»åŠ èœå•é¡¹
+		MenuItem item = menu.add(0,THREE,3,"å…³äºæ¸¸æˆ");
 		item.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-			// Îª²Ëµ¥ÏîÌí¼Ó OnMenuItemClickListener ¼àÌıÆ÷£¬´¦Àí²Ëµ¥Ñ¡ÖĞÊÂ¼ş£¬½« TextView ÎÄ±¾ÏÔÊ¾ÎªĞÂÌí¼ÓµÄ²Ëµ¥ÏîÎÄ±¾
+			// ä¸ºèœå•é¡¹æ·»åŠ  OnMenuItemClickListener ç›‘å¬å™¨ï¼Œå¤„ç†èœå•é€‰ä¸­äº‹ä»¶ï¼Œå°† TextView æ–‡æœ¬æ˜¾ç¤ºä¸ºæ–°æ·»åŠ çš„èœå•é¡¹æ–‡æœ¬
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				textView.setText("¹ØÓÚÓÎÏ·");
+				textView.setText("å…³äºæ¸¸æˆ");
 				return false;
 			}
 		});
@@ -48,10 +48,10 @@ public class OptionsMenuActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == 1) {
-			textView.setText("¿ªÊ¼ÓÎÏ·");
+			textView.setText("å¼€å§‹æ¸¸æˆ");
 		}
 		if (id == 2) {
-			textView.setText("ÔİÍ£ÓÎÏ·");
+			textView.setText("æš‚åœæ¸¸æˆ");
 		}
 		return super.onOptionsItemSelected(item);
 	}
