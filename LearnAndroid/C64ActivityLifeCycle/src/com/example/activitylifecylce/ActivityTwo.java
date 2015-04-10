@@ -1,9 +1,13 @@
 package com.example.activitylifecylce;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class ActivityTwo extends Activity {
 
@@ -11,7 +15,56 @@ public class ActivityTwo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_activity_two);
+		Button button = (Button)findViewById(R.id.button1);
+		button.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(ActivityTwo.this, ActivityLifeCycleActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		System.out.println("============== ActivityTwo onCreate");
 	}
+	
+	@Override
+	protected void onStart() {
+		super.onStart();
+		System.out.println("============== ActivityTwo onStart");
+	};
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		System.out.println("============== ActivityTwo onResume");
+	};
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		System.out.println("============== ActivityTwo onPause");
+	};
+	
+	@Override
+	protected void onStop() {
+		super.onStop();
+		System.out.println("============== ActivityTwo onStop");
+	};
+	
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		System.out.println("============== ActivityTwo onRestart");
+	};
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		System.out.println("============== ActivityTwo onDestroy");	
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

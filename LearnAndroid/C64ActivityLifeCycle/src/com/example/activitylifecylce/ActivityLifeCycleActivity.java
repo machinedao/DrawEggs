@@ -1,9 +1,13 @@
 package com.example.activitylifecylce;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 
 public class ActivityLifeCycleActivity extends Activity {
@@ -12,6 +16,20 @@ public class ActivityLifeCycleActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_life_cycle);
+        Button button = (Button)findViewById(R.id.button1);
+        button.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// Intent
+				Intent intent = new Intent();
+				// 确定目标组件
+				intent.setClass(ActivityLifeCycleActivity.this, ActivityTwo.class);
+				// 启动目标组件
+				startActivity(intent);
+			}
+		});
+        
         System.out.println("================== ActivityLifeCycle onCreate");
     }
     
